@@ -1,0 +1,43 @@
+# Environment variables
+.env
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot
+server/HELP.md
+
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# VS Code
+.vscode/
+
+# Node
+Client/node_modules/
+Client/dist/
+
+# OS
+.DS_Store
+Thumbs.db
