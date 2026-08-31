@@ -23,7 +23,7 @@ CREATE TABLE profile
     role VARCHAR(255) NOT NULL,
     location VARCHAR(255),
 
-    status VARCHAR(50) NOT NULL DEFAULT 'open to work',
+    status VARCHAR(50) NOT NULL DEFAULT 'OPEN_TO_WORK',
 
     email VARCHAR(255),
 
