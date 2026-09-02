@@ -1,7 +1,7 @@
-package dev.ukhalid.portfolio_api.controller;
+package dev.ukhalid.portfolio_api.controllers;
 
-import dev.ukhalid.portfolio_api.model.Skill;
-import dev.ukhalid.portfolio_api.repository.SkillRepository;
+import dev.ukhalid.portfolio_api.models.Skill;
+import dev.ukhalid.portfolio_api.repositories.SkillRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

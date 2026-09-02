@@ -1,7 +1,7 @@
-package dev.ukhalid.portfolio_api.controller;
+package dev.ukhalid.portfolio_api.controllers;
 
-import dev.ukhalid.portfolio_api.model.Experience;
-import dev.ukhalid.portfolio_api.repository.ExperienceRepository;
+import dev.ukhalid.portfolio_api.models.Experience;
+import dev.ukhalid.portfolio_api.repositories.ExperienceRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

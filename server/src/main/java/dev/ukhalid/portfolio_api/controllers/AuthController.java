@@ -1,4 +1,4 @@
-package dev.ukhalid.portfolio_api.controller;
+package dev.ukhalid.portfolio_api.controllers;
 
 import dev.ukhalid.portfolio_api.dto.LoginRequest;
 import dev.ukhalid.portfolio_api.dto.LoginResponse;

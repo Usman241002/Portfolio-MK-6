@@ -1,34 +1,29 @@
-package dev.ukhalid.portfolio_api.controller;
+package dev.ukhalid.portfolio_api.services;
 
-import dev.ukhalid.portfolio_api.model.Education;
-import dev.ukhalid.portfolio_api.repository.EducationRepository;
-import org.springframework.http.HttpStatus;
+import dev.ukhalid.portfolio_api.models.Education;
+import dev.ukhalid.portfolio_api.repositories.EducationRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/education")
-public class EducationController {
+@Service
+public class EducationService {
     private final EducationRepository educationRepository;
 
-    public EducationController(final EducationRepository educationRepository) {
+    public EducationService(final EducationRepository educationRepository) {
         this.educationRepository = educationRepository;
     }
 
-    @GetMapping()
     public Iterable<Education> getAllEducation() {
         return this.educationRepository.findAll();
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping()
-    public Education createEducation(@RequestBody Education education) {
+    public Education createEducation(Education education) {
         return this.educationRepository.save(education);
     }
 
-    @PutMapping("/{id}")
-    public Education updateEducation(@PathVariable(name = "id") Integer id, @RequestBody Education education) {
+    public Education updateEducation(Integer id, Education education) {
         Optional<Education> educationToUpdateOptional = this.educationRepository.findById(id);
 
         if (educationToUpdateOptional.isEmpty()) {
@@ -48,11 +43,10 @@ public class EducationController {
         return this.educationRepository.save(educationToUpdate);
     }
 
-    @DeleteMapping("/{id}")
-    public Education deleteEducation(@PathVariable(name = "id") Integer id) {
+    public Education deleteEducation(Integer id) {
         Optional<Education> educationToDeleteOptional = this.educationRepository.findById(id);
 
-        if(educationToDeleteOptional.isEmpty()) {
+        if (educationToDeleteOptional.isEmpty()) {
             return null;
         }
 
@@ -61,6 +55,4 @@ public class EducationController {
 
         return educationToDelete;
     }
-
-
 }
