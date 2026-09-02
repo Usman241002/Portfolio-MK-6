@@ -17,7 +17,7 @@ VALUES (
            'Usman Khalid',
            'Software Engineer',
            'Birmingham, United Kingdom',
-           'open to work',
+           'OPEN_TO_WORK',
            'usman@example.com',
            'https://ukhalid.dev',
            'https://github.com/ukhalid',
@@ -41,7 +41,7 @@ INSERT INTO projects (
     description,
     status,
     repository_url,
-    live_demo_url,
+    demo_url,
     thumbnail_url,
     is_featured,
     is_kodon_project
@@ -56,7 +56,7 @@ VALUES
         DATE '2026-06-01',
         NULL,
         'A REST API built with Spring Boot for managing portfolio projects, skills, education and professional experience.',
-        'ongoing',
+        'ONGOING',
         'https://github.com/example/portfolio-api',
         NULL,
         '/images/projects/portfolio-api.png',
@@ -72,7 +72,7 @@ VALUES
         DATE '2026-07-01',
         NULL,
         'A business website and digital platform for a software development company.',
-        'ongoing',
+        'ONGOING',
         'https://github.com/example/kodon',
         'https://kodon.uk',
         '/images/projects/kodon.png',
@@ -88,7 +88,7 @@ VALUES
         DATE '2025-01-10',
         DATE '2025-04-15',
         'A backend API providing authentication, users, posts and social features.',
-        'completed',
+        'COMPLETED',
         'https://github.com/example/sphere-api',
         NULL,
         '/images/projects/sphere.png',
@@ -104,7 +104,7 @@ VALUES
         DATE '2025-06-01',
         DATE '2025-08-20',
         'A full stack application for managing pet information and records.',
-        'completed',
+        'COMPLETED',
         'https://github.com/example/pet-tracker',
         NULL,
         '/images/projects/pet-tracker.png',
@@ -119,7 +119,7 @@ VALUES
 
 INSERT INTO project_sections (
     project_id,
-    display_order,
+    display_index,
     image_url,
     image_position,
     content
@@ -129,7 +129,7 @@ VALUES
         1,
         1,
         '/images/projects/portfolio-api-architecture.png',
-        'right',
+        'RIGHT',
         '# Overview
 
     This project provides the backend for a portfolio website.
@@ -140,7 +140,7 @@ VALUES
         1,
         2,
         NULL,
-        'none',
+        'NONE',
         '# Technology
 
     The API is built using Spring Boot and uses a relational database for persistent data.'
@@ -149,7 +149,7 @@ VALUES
         2,
         1,
         '/images/projects/kodon-homepage.png',
-        'left',
+        'LEFT',
         '# KODON
 
     KODON provides custom software and digital systems for businesses.'
@@ -158,7 +158,7 @@ VALUES
         2,
         2,
         '/images/projects/kodon-services.png',
-        'right',
+        'RIGHT',
         '# Services
 
     The platform showcases software development and digital solutions.'
@@ -167,7 +167,7 @@ VALUES
         3,
         1,
         NULL,
-        'none',
+        'NONE',
         '# API Features
 
     The API supports users, authentication, posts and social interactions.'
@@ -301,7 +301,7 @@ VALUES
     (
         'Software Engineer and Founder',
         'KODON',
-        'freelance',
+        'FREELANCE',
         'Birmingham, United Kingdom',
         DATE '2026-08-01',
         NULL,
@@ -310,7 +310,7 @@ VALUES
     (
         'Software Developer',
         'Personal Projects',
-        'freelance',
+        'FREELANCE',
         'Birmingham, United Kingdom',
         DATE '2024-01-01',
         DATE '2026-07-01',

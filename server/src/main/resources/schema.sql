@@ -55,10 +55,10 @@ CREATE TABLE projects
 
     description TEXT NOT NULL,
 
-    status VARCHAR(50) NOT NULL DEFAULT 'ongoing',
+    status VARCHAR(50) NOT NULL DEFAULT 'ONGOING',
 
     repository_url VARCHAR(2048),
-    live_demo_url VARCHAR(2048),
+    demo_url VARCHAR(2048),
     thumbnail_url VARCHAR(2048),
 
     is_featured BOOLEAN NOT NULL DEFAULT FALSE,
@@ -83,11 +83,11 @@ CREATE TABLE project_sections
 
     project_id INTEGER NOT NULL,
 
-    display_order INTEGER NOT NULL,
+    display_index INTEGER NOT NULL,
 
     image_url VARCHAR(2048),
 
-    image_position VARCHAR(50) NOT NULL DEFAULT 'none',
+    image_position VARCHAR(50) NOT NULL DEFAULT 'NONE',
 
     content TEXT NOT NULL,
 
@@ -97,7 +97,7 @@ CREATE TABLE project_sections
             ON DELETE CASCADE,
 
     CONSTRAINT unique_project_section_order
-        UNIQUE (project_id, display_order)
+        UNIQUE (project_id, display_index)
 );
 
 
