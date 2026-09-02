@@ -1,9 +1,7 @@
 package dev.ukhalid.portfolio_api.model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "SKILLS")
