@@ -4,10 +4,7 @@ import dev.ukhalid.portfolio_api.dto.LoginRequest;
 import dev.ukhalid.portfolio_api.dto.LoginResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
@@ -23,7 +20,7 @@ public class AuthController {
 
 //    @PostMapping("/verify")
 
-
+    @ResponseStatus(HttpStatus.OK)
     @PostMapping("/login")
     public LoginResponse loginUser(@RequestBody LoginRequest loginRequest) {
         //TODO: add bcrypt
@@ -37,5 +34,4 @@ public class AuthController {
 
         return new LoginResponse(HttpStatus.OK, "Login successful", "valid_token");
     }
-
 }

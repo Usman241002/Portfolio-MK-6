@@ -2,6 +2,7 @@ package dev.ukhalid.portfolio_api.controller;
 
 import dev.ukhalid.portfolio_api.model.Skill;
 import dev.ukhalid.portfolio_api.repository.SkillRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -20,6 +21,7 @@ public class SkillController {
         return this.skillRepository.findAll();
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public Skill createSkill(Skill skill) {
         return this.skillRepository.save(skill);

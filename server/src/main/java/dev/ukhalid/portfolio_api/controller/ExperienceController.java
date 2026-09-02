@@ -2,6 +2,7 @@ package dev.ukhalid.portfolio_api.controller;
 
 import dev.ukhalid.portfolio_api.model.Experience;
 import dev.ukhalid.portfolio_api.repository.ExperienceRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -20,6 +21,7 @@ public class ExperienceController {
         return this.experienceRepository.findAll();
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
     public Experience createExperience(@RequestBody Experience experience) {
         return this.experienceRepository.save(experience);

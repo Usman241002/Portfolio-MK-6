@@ -2,6 +2,7 @@ package dev.ukhalid.portfolio_api.controller;
 
 import dev.ukhalid.portfolio_api.model.Education;
 import dev.ukhalid.portfolio_api.repository.EducationRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -20,6 +21,7 @@ public class EducationController {
         return this.educationRepository.findAll();
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
     public Education createEducation(@RequestBody Education education) {
         return this.educationRepository.save(education);

@@ -2,6 +2,7 @@ package dev.ukhalid.portfolio_api.controller;
 
 import dev.ukhalid.portfolio_api.model.Project;
 import dev.ukhalid.portfolio_api.repository.ProjectRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -21,6 +22,7 @@ public class ProjectController {
         return this.projectRepository.findAll();
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public Project createProject(@RequestBody Project project) {
         return this.projectRepository.save(project);
