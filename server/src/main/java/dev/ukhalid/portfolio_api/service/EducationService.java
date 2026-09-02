@@ -1,9 +1,8 @@
-package dev.ukhalid.portfolio_api.services;
+package dev.ukhalid.portfolio_api.service;
 
-import dev.ukhalid.portfolio_api.models.Education;
-import dev.ukhalid.portfolio_api.repositories.EducationRepository;
+import dev.ukhalid.portfolio_api.model.Education;
+import dev.ukhalid.portfolio_api.repository.EducationRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 

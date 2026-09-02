@@ -1,6 +1,6 @@
-package dev.ukhalid.portfolio_api.models;
+package dev.ukhalid.portfolio_api.model;
 
-import dev.ukhalid.portfolio_api.models.enums.ImagePosition;
+import dev.ukhalid.portfolio_api.model.enums.ImagePosition;
 import jakarta.persistence.*;
 
 @Entity

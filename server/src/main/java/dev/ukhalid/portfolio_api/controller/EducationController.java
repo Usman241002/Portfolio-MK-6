@@ -1,7 +1,7 @@
-package dev.ukhalid.portfolio_api.controllers;
+package dev.ukhalid.portfolio_api.controller;
 
-import dev.ukhalid.portfolio_api.models.Education;
-import dev.ukhalid.portfolio_api.services.EducationService;
+import dev.ukhalid.portfolio_api.model.Education;
+import dev.ukhalid.portfolio_api.service.EducationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

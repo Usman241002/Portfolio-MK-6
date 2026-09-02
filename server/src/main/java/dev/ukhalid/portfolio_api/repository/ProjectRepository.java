@@ -1,6 +1,6 @@
-package dev.ukhalid.portfolio_api.repositories;
+package dev.ukhalid.portfolio_api.repository;
 
-import dev.ukhalid.portfolio_api.models.Project;
+import dev.ukhalid.portfolio_api.model.Project;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProjectRepository extends CrudRepository<Project, Integer> {

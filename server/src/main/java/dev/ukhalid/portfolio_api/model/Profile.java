@@ -1,8 +1,8 @@
-package dev.ukhalid.portfolio_api.models;
+package dev.ukhalid.portfolio_api.model;
 
 import jakarta.persistence.*;
 
-import dev.ukhalid.portfolio_api.models.enums.ProfileStatus;
+import dev.ukhalid.portfolio_api.model.enums.ProfileStatus;
 
 @Entity
 @Table(name = "PROFILE")

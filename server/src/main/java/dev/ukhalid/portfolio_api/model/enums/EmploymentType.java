@@ -1,4 +1,4 @@
-package dev.ukhalid.portfolio_api.models.enums;
+package dev.ukhalid.portfolio_api.model.enums;
 
 public enum EmploymentType {
     FULL_TIME,

@@ -1,7 +1,7 @@
-package dev.ukhalid.portfolio_api.controllers;
+package dev.ukhalid.portfolio_api.controller;
 
-import dev.ukhalid.portfolio_api.models.Profile;
-import dev.ukhalid.portfolio_api.repositories.ProfileRepository;
+import dev.ukhalid.portfolio_api.model.Profile;
+import dev.ukhalid.portfolio_api.repository.ProfileRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;

@@ -1,37 +1,27 @@
-package dev.ukhalid.portfolio_api.models;
+package dev.ukhalid.portfolio_api.model;
 
-import dev.ukhalid.portfolio_api.models.enums.EmploymentType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "EXPERIENCES")
-public class Experience {
-
+@Table(name = "EDUCATION")
+public class Education {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
-
     @Column(name = "TITLE")
     private String title;
-
-    @Column(name = "COMPANY")
-    private String company;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "EMPLOYMENT_TYPE")
-    private EmploymentType employmentType;
-
+    @Column(name = "INSTITUTION")
+    private String institution;
     @Column(name = "LOCATION")
     private String location;
-
     @Column(name = "START_DATE")
     private LocalDate startDate;
-
     @Column(name = "END_DATE")
     private LocalDate endDate;
-
+    @Column(name = "GRADE")
+    private String grade;
     @Column(name = "DESCRIPTION")
     private String description;
 
@@ -44,7 +34,6 @@ public class Experience {
         this.id = id;
     }
 
-
     public String getTitle() {
         return this.title;
     }
@@ -53,24 +42,13 @@ public class Experience {
         this.title = title;
     }
 
-
-    public String getCompany() {
-        return this.company;
+    public String getInstitution() {
+        return this.institution;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void setInstitution(String institution) {
+        this.institution = institution;
     }
-
-
-    public EmploymentType getEmploymentType() {
-        return this.employmentType;
-    }
-
-    public void setEmploymentType(EmploymentType employmentType) {
-        this.employmentType = employmentType;
-    }
-
 
     public String getLocation() {
         return this.location;
@@ -80,7 +58,6 @@ public class Experience {
         this.location = location;
     }
 
-
     public LocalDate getStartDate() {
         return this.startDate;
     }
@@ -88,7 +65,6 @@ public class Experience {
     public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
-
 
     public LocalDate getEndDate() {
         return this.endDate;
@@ -98,6 +74,13 @@ public class Experience {
         this.endDate = endDate;
     }
 
+    public String getGrade() {
+        return this.grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
 
     public String getDescription() {
         return this.description;

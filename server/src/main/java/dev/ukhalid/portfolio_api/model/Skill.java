@@ -1,4 +1,4 @@
-package dev.ukhalid.portfolio_api.models;
+package dev.ukhalid.portfolio_api.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;

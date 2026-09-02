@@ -1,6 +1,6 @@
-package dev.ukhalid.portfolio_api.models;
+package dev.ukhalid.portfolio_api.model;
 
-import dev.ukhalid.portfolio_api.models.enums.ProjectStatus;
+import dev.ukhalid.portfolio_api.model.enums.ProjectStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
