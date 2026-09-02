@@ -4,21 +4,23 @@ import dev.ukhalid.portfolio_api.model.enums.ImagePosition;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "PROJECT_SECTION")
+@Table(name = "PROJECT_SECTIONS")
 public class ProjectSection {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column(name = "PROJECT_ID")
-    private Integer projectId;
+    @ManyToOne
+    @JoinColumn(name = "PROJECT_ID")
+    private Project project;
     @Column(name = "DISPLAY_INDEX")
     private Integer displayIndex;
     @Column(name = "IMAGE_URL")
     private String imageUrl;
+    @Enumerated(EnumType.STRING)
     @Column(name = "IMAGE_POSITION")
     private ImagePosition imagePosition = ImagePosition.NONE;
-    @Column(name = "CONTEXT")
-    private String context;
+    @Column(name = "CONTENT")
+    private String content;
 
     public Integer getId() {
         return this.id;
@@ -28,12 +30,12 @@ public class ProjectSection {
         this.id = id;
     }
 
-    public Integer getProjectId() {
-        return this.projectId;
+    public Project fetchProject() {
+        return this.project;
     }
 
-    public void setProjectId(Integer projectId) {
-        this.projectId = projectId;
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     public Integer getDisplayIndex() {
@@ -60,11 +62,11 @@ public class ProjectSection {
         this.imagePosition = imagePosition;
     }
 
-    public String getContext() {
-        return this.context;
+    public String getContent() {
+        return this.content;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContent(String content) {
+        this.content = content;
     }
 }
