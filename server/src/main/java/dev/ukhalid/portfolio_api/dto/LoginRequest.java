@@ -4,11 +4,12 @@ public class LoginRequest {
     private String email;
     private String password;
 
+
     public String getEmail() {
-        return this.email;
+        return email;
     }
 
-    public void setEmail() {
+    public void setEmail(String email) {
         this.email = email;
     }
 

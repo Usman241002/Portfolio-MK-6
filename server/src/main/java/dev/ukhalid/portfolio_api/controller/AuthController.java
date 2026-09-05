@@ -1,37 +1,29 @@
 package dev.ukhalid.portfolio_api.controller;
 
+import dev.ukhalid.portfolio_api.dto.AuthResponse;
 import dev.ukhalid.portfolio_api.dto.LoginRequest;
-import dev.ukhalid.portfolio_api.dto.LoginResponse;
-import org.springframework.beans.factory.annotation.Value;
+import dev.ukhalid.portfolio_api.service.AuthService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
+
+import java.net.http.HttpResponse;
 
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
+    private final AuthService authService;
 
-    @Value("${admin.email}")
-    private String adminEmail;
+    public AuthController(final AuthService authService) {
+        this.authService = authService;
+    }
 
-    @Value("${admin.password}")
-    private String adminPassword;
-
-
-//    @PostMapping("/verify")
+    @PostMapping("/login")
+    public AuthResponse loginUser(@RequestBody LoginRequest loginRequest) {
+        return authService.loginUser(loginRequest);
+    }
 
     @ResponseStatus(HttpStatus.OK)
-    @PostMapping("/login")
-    public LoginResponse loginUser(@RequestBody LoginRequest loginRequest) {
-        //TODO: add bcrypt
-
-
-        boolean isPasswordValid = adminPassword.equals(loginRequest.getPassword());
-
-        if (!adminEmail.equals(loginRequest.getEmail()) || !isPasswordValid) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid username or password");
-        }
-
-        return new LoginResponse(HttpStatus.OK, "Login successful", "valid_token");
+    public HttpStatus verifyToken() {
+        return this.authService.verifyToken();
     }
 }
